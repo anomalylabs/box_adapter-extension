@@ -1,0 +1,12 @@
+{
+    "name": "anomaly/box_adapter-extension",
+    "type": "streams-addon",
+    "require": {
+        "ryanvade/flysystem-box": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anomaly\\BoxAdapterExtension\\": "src/"
+        }
+    }
+}
