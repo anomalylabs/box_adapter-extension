@@ -1,12 +1,12 @@
 <?php namespace Anomaly\BoxAdapterExtension\Command;
 
+use Anomaly\BoxAdapterExtension\Adapter\BoxAdapter;
 use Anomaly\ConfigurationModule\Configuration\Contract\ConfigurationRepositoryInterface;
 use Anomaly\EncryptedFieldType\EncryptedFieldTypePresenter;
 use Anomaly\FilesModule\Disk\Adapter\AdapterFilesystem;
 use Anomaly\FilesModule\Disk\Contract\DiskInterface;
 use Illuminate\Filesystem\FilesystemManager;
 use League\Flysystem\MountManager;
-use Zburke\Flysystem\Box\BoxAdapter;
 
 /**
  * Class LoadDisk
