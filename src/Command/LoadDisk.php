@@ -4,10 +4,9 @@ use Anomaly\ConfigurationModule\Configuration\Contract\ConfigurationRepositoryIn
 use Anomaly\EncryptedFieldType\EncryptedFieldTypePresenter;
 use Anomaly\FilesModule\Disk\Adapter\AdapterFilesystem;
 use Anomaly\FilesModule\Disk\Contract\DiskInterface;
-use FlysystemBox\BoxAdapter;
 use Illuminate\Filesystem\FilesystemManager;
-use LaravelBox\LaravelBox;
 use League\Flysystem\MountManager;
+use Zburke\Flysystem\Box\BoxAdapter;
 
 /**
  * Class LoadDisk
@@ -53,8 +52,8 @@ class LoadDisk
         $driver = new AdapterFilesystem(
             $this->disk,
             new BoxAdapter(
-                new LaravelBox($token->decrypt()),
-                $prefix ? $this->disk->getSlug() : ''
+                $token->decrypt(),
+                $prefix ? $this->disk->getSlug() : null
             )
         );
 
