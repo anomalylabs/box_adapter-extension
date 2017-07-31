@@ -4,6 +4,12 @@
     "require": {
         "ryanthompson/flysystem-box": "master-dev"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/RyanThompson/flysystem-box"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Anomaly\\BoxAdapterExtension\\": "src/"
