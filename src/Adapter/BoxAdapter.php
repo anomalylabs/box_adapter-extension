@@ -1,5 +1,6 @@
 <?php namespace Anomaly\BoxAdapterExtension\Adapter;
 
+use Box\Content\Client;
 use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\Config;
 
@@ -13,6 +14,18 @@ use League\Flysystem\Config;
 class BoxAdapter extends AbstractAdapter
 {
 
+    /**
+     * The Box API client.
+     *
+     * @var Client
+     */
+    protected $client;
+
+    /**
+     * The path prefix.
+     *
+     * @var string
+     */
     protected $pathPrefix;
 
     /**
@@ -23,6 +36,7 @@ class BoxAdapter extends AbstractAdapter
      */
     public function __construct($token, $pathPrefix)
     {
+
 
         $this->pathPrefix = $pathPrefix;
     }

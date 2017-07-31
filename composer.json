@@ -2,7 +2,7 @@
     "name": "anomaly/box_adapter-extension",
     "type": "streams-addon",
     "require": {
-        "fgreinus/boxphpapi": "~0.2.0"
+        "ryanvade/flysystem-box": "dev-master"
     },
     "autoload": {
         "psr-4": {
