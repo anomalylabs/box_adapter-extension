@@ -2,7 +2,7 @@
     "name": "anomaly/box_adapter-extension",
     "type": "streams-addon",
     "require": {
-        "ryanthompson/flysystem-box": "master-dev"
+        "ryanthompson/flysystem-box": "dev-master"
     },
     "repositories": [
         {
